@@ -176,11 +176,11 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgb(0,0,0);
     background: rgba(0,0,0, 0.5);
     text-align: center;
     backdrop-filter: blur(4px);
     max-width: 400px;
+    height: fit-content; /* To make the text fit in the div */
   }
   
   /* The dots/bullets/indicators */
@@ -255,11 +255,11 @@ html {
   float:left;
   width:100%;
 }
-#featured h2 { 
+/*#featured h2 { 
   border-bottom: 0.2em solid #BA0C2F;
   font-size: 0%;
   width: fit-content;
-}
+} I don't see how this is used, and it is in my way, so...*/
 #discord {
   position:absolute;
   padding-top:1em;
@@ -285,7 +285,7 @@ html {
   
 }
 
-.ev-li h3 { 
+.ev-li h2 { 
   font-size:100%;
   padding-right:1em;
   padding-left: 1em;
@@ -393,4 +393,10 @@ footer a:hover {
   color: white;
   text-decoration: underline;
   text-decoration-color: #BA0C2F;
+}
+
+/* event link */
+#featured a {
+  color: black;
+  text-decoration: none;
 }

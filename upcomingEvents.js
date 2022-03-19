@@ -17,7 +17,7 @@ function renderEventSlide() {
     while (count < event_info.length && count < 4) { 
         var listItem = document.createElement("li");
         var link = document.createElement("a");
-        var title = document.createElement("h3");
+        var title = document.createElement("h2");
         var short = document.createElement("p");
         var date = document.createElement("p");
         var img = document.createElement("img");
@@ -27,6 +27,7 @@ function renderEventSlide() {
         listItem.append(link);
         link.append(img,title,date, short);
         img.src=event_info[count]['img'];
+        img.alt=event_info[count]['title'] + " Picture";
         title.appendChild(document.createTextNode(event_info[count]["title"]));
         short.appendChild(document.createTextNode(event_info[count]["short"]));
         date.appendChild(document.createTextNode(event_info[count]["date"]));

@@ -1,6 +1,6 @@
 
 var slideIndex = 1;
-showSlides(slideIndex);
+//showSlides(slideIndex); was causing an error since slides had a length of 0 when it's called
 
 // Next/previous controls
 function plusSlides(n) {

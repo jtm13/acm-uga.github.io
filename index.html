@@ -1,7 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 
 <head>
     <title>ACM-UGA</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="resources/styles/styles.css">
     <script src="slides.js"></script>
     <script>
@@ -21,8 +23,28 @@
         window.setTimeout(offsetAnchor, 1); // The delay of 1 is arbitrary and may not always work right (although it did in my testing).
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script>
+         // Sets SameSite for Cookies
+         const googleCookies = [
+            {"title":"OGPC", "domain":".google.com/"},
+            {"title":"OSID", "domain":"calendar.google.com/"},
+            {"title":"HSID", "domain":".google.com/"},
+            {"title":"SSID", "domain":".google.com/"},
+            {"title":"APISID", "domain":".google.com/"},
+            {"title":"SAPISID", "domain":".google.com/"},
+            {"title":"__Secure-1PAPISID", "domain":".google.com/"},
+            {"title":"__Secure-1PSIDCC", "domain":".google.com/"},
+            {"title":"SID", "domain":".google.com/"},
+            {"title":"__Secure-1PSID", "domain":".google.com/"},
+            {"title":"SIDCC", "domain":".google.com/"}
+        ];
+        googleCookies.forEach((ar) => $.cookie(ar["title"], $.cookie(ar["title"]),{ expires : 365, domain: ar["domain"], path: "/;SameSite=Lax", secure: true}));
+    </script>-->
     <script src="event-slide.js"></script>
     <link rel="shortcut icon" type="image/png" href="resources\favicon.png" />
+    <meta name="description" content="ACM-UGA Home Page">
+    <meta name="keywords" content="ACM-UGA, ACM-W girls.code()">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +56,7 @@
 
     <div id="banner">
         <div id="imgBan">
-            <img src="resources/logo.png">
+            <img src="resources/logo.png" alt="ACM logo">
             <div class="topnav-right">
                 <ul>
                     <li><a href="#home">HOME</a></li>
@@ -63,7 +85,7 @@
         <div class="slideshow-container" id="home">
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-                <img src="resources/banners/slc.jpg" style="width:100%;">
+                <img src="resources/banners/slc.jpg" style="width:100%;" alt="Front of SLC">
                 <div class="text">
                     <h2>Connect</h2>
                     <p class="slide-desc">Come visit our club socials to meet people and connect with other like-minded
@@ -75,7 +97,7 @@
             </div>
 
             <div class="mySlides fade">
-                <img src="resources/banners/boydgraduate.jpg" style="width:100%">
+                <img src="resources/banners/boydgraduate.jpg" style="width:100%" alt="Front of Boyd Graduate Center">
                 <div class="text">
                     <h2>Prepare</h2>
                     <p class="slide-desc">Attend our workshops to launch and prepare for your professional career.
@@ -86,7 +108,7 @@
             </div>
 
             <div class="mySlides fade">
-                <img src="resources/banners/miller.jpg" style="width:100%">
+                <img src="resources/banners/miller.jpg" style="width:100%" alt="Front of Miller">
                 <div class="text">
                     <h2>Learn</h2>
                     <p class="slide-desc">Come out to our meetings and learn something new everytime. With the
@@ -98,8 +120,9 @@
             </div>
 
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+            <span class="next" onclick="plusSlides(1)">&#10095;</span>
+            <!--Why were these links? They did not need to be and did not redirect anywhere-->
         </div>
         <br>
         <!-- The dots/circles
@@ -130,19 +153,19 @@
                             <h1 class="red-underline center-header">Social Network</h1>
                             <div class="row-img-1">
                                 <a href="https://discord.gg/pZsm6vb3Bc">
-                                    <img class="help" src="resources/social_img/discord.png" title="Our discord">
+                                    <img class="help" src="resources/social_img/discord.png" title="Our discord" alt="Discord logo">
                                 </a>
                                 <br>
                                 <a href="https://www.instagram.com/acmuga">
-                                    <img class="help" src="resources/social_img/insta.png" title="Our instagram">
+                                    <img class="help" src="resources/social_img/insta.png" title="Our instagram" alt="Instagram logo">
                                 </a>
                                 <br>
                                 <a href="https://github.com/acm-uga">
-                                    <img class="help" src="resources/social_img/github.png" title="Our github">
+                                    <img class="help" src="resources/social_img/github.png" title="Our github" alt="Github logo">
                                 </a>
                                 <br>
                                 <a href="https://github.com/acm-uga/archive">
-                                    <img class="help" id="csip" src="resources/social_img/csip.png" title="Computer Science Interview Prep">
+                                    <img class="help" id="csip" src="resources/social_img/csip.png" title="Computer Science Interview Prep" alt="CSIP logo">
                                 </a>
                             </div>
                         </div>
@@ -160,7 +183,8 @@
                 <h1 class="red-underline center-header">Calendar</h1>
                 <iframe
                     src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23616161&ctz=America%2FNew_York&showTabs=0&showPrint=0&showCalendars=0&showTz=0&showTitle=0&src=M2NnNTd0OGhmYWM3aWcxajRmZ3Btcm1kMThAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D81B60"
-                    style="border:solid 1px #777" width="90%" height="600" frameborder="0" scrolling="no"></iframe>
+                    style="border:solid 1px #777" width="90%" height="600" frameborder="0" scrolling="no"
+                    title="Google Calendar"></iframe>
             </div>
             <div id="featured" style="min-height: 500px;">
                 <h1 class="red-underline center-header">Featured Events</h1>
@@ -170,7 +194,7 @@
             </div>
             <div id="resc" style="clear:both; padding-top: 2em;">
                 <h1 class="red-underline center-header">Resources</h1>
-                <img src="resources/underConstruction.png" width="600px" height="300px" />
+                <img src="resources/underConstruction.png" width="600px" height="300px" alt="Under Contruction image"/>
             </div>
             <div id="about">
                 <h1 class="red-underline center-header">About Us</h1>
@@ -180,7 +204,7 @@
                         margin-bottom:75px;
                         ">
                         <h2>President</h2>
-                        <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                        <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                         <div style="text-align: center;">
                             <p>Role: President of ACM</p>
                             <p>Name: Jeffery John</p>
@@ -203,7 +227,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: Vice President of ACM</p>
                                     <p>Name: Saba Merchant</p>
@@ -216,7 +240,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: PR & Graphics</p>
                                     <p>Name: Matthew Tzou</p>
@@ -229,7 +253,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: Competition Chair</p>
                                     <p>Name: Brandon Yau</p>
@@ -242,7 +266,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: Treasury</p>
                                     <p>Name: Ivan Mo</p>
@@ -255,7 +279,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: Community Outreach</p>
                                     <p>Name: Manmeet Gill</p>
@@ -268,7 +292,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: PR</p>
                                     <p>Name: Helium Yang</p>
@@ -281,7 +305,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: PR</p>
                                     <p>Name: Banibe</p>
@@ -307,7 +331,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: Officer</p>
                                     <p>Name: David Gonzales</p>
@@ -320,7 +344,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: Officer</p>
                                     <p>Name: Genki Genki</p>
@@ -333,7 +357,7 @@
                                 margin-left: 50px;
                                 margin-right: 50px;
                                 ">
-                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px">
+                                <img src="resources/officers/default_photo.jpeg" width="125px" height="125px" alt="Default person photo">
                                 <div style="text-align: center;">
                                     <p>Role: Officer</p>
                                     <p>Name: Jeffery John</p>
